@@ -10,10 +10,28 @@ header{
 }
 
 .card{
-    background-color: rgb(245, 205, 218);
+    background-color: rgb(253, 221, 230);
     padding: 10px;
+}
+
+.paragraph{
+    color: black;
+    font-size: 40px;
 }
 
 h1{
     font-family: "Playwrite SK", cursive;
+}
+
+.card-title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    margin-top: 10px;
+}
+
+.card-header{
+    background-image: url(images/card.jpg);
+    color: white;
+    font-size: 40px;
 }
