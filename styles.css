@@ -3,10 +3,34 @@ body {
     background-size: contain;
    
 }
+.container{
+    transition: transform .5s;
+}
 
 header{
     background-color: white;
     padding: 0 20px;
+}
+
+.icon{
+    position: relative;
+}
+
+.number{
+   font-size: 15px;
+   color: rgb(252, 248, 248);
+   padding: 1px;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   bottom: 35px;
+   right: -10px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   padding: 2;
+   background-color: rgb(250, 3, 3);
 }
 
 .card{
@@ -19,7 +43,7 @@ header{
     font-size: 40px;
 }
 
-h1{
+#parfum{
     font-family: "Playwrite SK", cursive;
 }
 
@@ -33,5 +57,83 @@ h1{
 .card-header{
     background-image: url(images/card.jpg);
     color: white;
+    font-weight: 500;
     font-size: 40px;
+}
+
+.shopping-cart{
+    width: 400px;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -400px;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+   transition: .5s;
+}
+
+body.showCart .shopping-cart{
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+body.showCart .container{
+    transform: translateX(-250px);
+}
+
+.shopping-cart h1{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shopping-cart .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.shopping-cart .buttons button{
+    background-image: url(images/card.jpg);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.shopping-cart .list .items img{
+  width: 70%;
+}
+
+.shopping-cart .list .items{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.shopping-cart .quantity span{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: beige;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.shopping-cart .quantity .digit{
+    background-color: transparent;
+    color: white;
+}
+
+.shopping-cart .items:nth-child(even){
+    background-color: rgb(24, 22, 22);
+}
+
+.shopping-cart{
+    overflow: auto;
 }

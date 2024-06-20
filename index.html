@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="styles.css">
     <title>Shopping Cart</title>
 </head>
-<body>
+<body class="showCart">
     <div class="container py-3 nav-bar">
         <header>
           <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -26,9 +26,11 @@
             </a>
       
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-              <a class="py-2 link-body-emphasis text-decoration-none" href="#"
-               style="font-size: 25px;" id="cart">
-               <i class="fa-solid fa-cart-shopping"></i>
+                <!-- <h6 class="number">1</h6> -->
+              <a class="py-2 link-body-emphasis text-decoration-none icon" href="#"
+               style="font-size: 25px;" id="cart"> 
+               <i class="fa-solid fa-cart-shopping" onclick="displayCart()"></i>
+               <span class="number">0</span>
             </a>
             </nav>
           </div>
@@ -50,7 +52,7 @@
                 <div class="card-body">
                   <img src="images/perfume-9.webp" alt="" width="200px">
                    <h1 class="card-title pricing-card-title">R1,200</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -62,7 +64,7 @@
                 <div class="card-body">
                   <img src="images/perfume-2.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">R1,000</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -74,7 +76,7 @@
                 <div class="card-body">
                   <img src="images/perfume-3.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">R1,500</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -88,7 +90,7 @@
                 <div class="card-body">
                   <img src="images/perfume-10.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">R1,700</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -100,7 +102,7 @@
                 <div class="card-body">
                   <img src="images/perfume-11.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">R1,200</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -112,13 +114,39 @@
                 <div class="card-body">
                   <img src="images/perfume-12.jfif" alt="" width="160px">
                   <h1 class="card-title pricing-card-title">R2,100</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark" onclick="handleCart()">Add to cart</button>
                 </div>
               </div>
             </div>
           </div>
         </main>
 </div>
+    </div>
+
+    <div class="shopping-cart">
+        <h1>Shopping cart</h1>
+        <div class="list">
+   <div class="items">
+    <div class="image">
+        <img src="images/perfume-3.jfif" alt="">
+    </div>
+    <div class="name">
+        NAME:
+    </div>
+    <div class="price">
+        PRICE:
+    </div>
+    <div class="quantity">
+        <span class="minus"><</span>
+        <span class="digit">1</span>
+        <span class="plus">></span>
+    </div>
+    </div>
+        </div>
+        <div class="buttons">
+            <button class="close" onclick="displayCart()">CLOSE</buttton>
+            <button class="check-out">CHECKOUT</button>
+        </div>
     </div>
         <script src="main.js"></script>
 </body>
