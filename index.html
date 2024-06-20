@@ -9,12 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/d6a83b973d.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="styles.css">
     <title>Shopping Cart</title>
 </head>
 <body>
-    <div class="container py-3">
+    <div class="container py-3 nav-bar">
         <header>
           <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
@@ -29,92 +32,93 @@
             </a>
             </nav>
           </div>
-      
+       </header>
+    </div>
+ <div class="background">
+    <div class="container">
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <h1 class="display-4 fw-normal text-body-emphasis" id="parfum">Eau de Parfum</h1>
             <p class="fs-5 text-body-secondary">Inspired by the mystical beauty of twilight in an enchanted garden, Eau de Parfum range captures the magical transition from day to night, where the air is filled with whispers of floral secrets and earthy whispers.</p>
           </div>
-        </header>
-      
         <main>
           <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
+            <div class="col product">
               <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                  <h4 class="my-0 fw-normal">Free</h4>
+                  <h4 class="my-0 fw-normal">Scented Bliss</h4>
                 </div>
                 <div class="card-body">
-                  <img src="images/perfume-9.webp" alt="">
+                  <img src="images/perfume-9.webp" alt="" width="200px">
                    <h1 class="card-title pricing-card-title">$0</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-outline-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col product">
               <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                  <h4 class="my-0 fw-normal">Pro</h4>
+                  <h4 class="my-0 fw-normal">Fragrance Fusion</h4>
                 </div>
                 <div class="card-body">
-                  <img src="images/perfume-2.jfif" alt="">
+                  <img src="images/perfume-2.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">$15</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                <div class="card-header py-3 text-bg-primary border-primary">
-                  <h4 class="my-0 fw-normal">Enterprise</h4>
+            <div class="col product">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Aromaavenue</h4>
                 </div>
                 <div class="card-body">
-                  <img src="images/perfume-3.jfif" alt="">
+                  <img src="images/perfume-3.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">$29</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
+            <div class="col product">
               <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                  <h4 class="my-0 fw-normal">Free</h4>
+                  <h4 class="my-0 fw-normal">Fragrance Finesse</h4>
                 </div>
                 <div class="card-body">
-                  <img src="images/perfume-10.jfif" alt="">
+                  <img src="images/perfume-10.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">$0</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-outline-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col product">
               <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                  <h4 class="my-0 fw-normal">Pro</h4>
+                  <h4 class="my-0 fw-normal">Noir Absolu</h4>
                 </div>
                 <div class="card-body">
-                  <img src="images/perfume-11.jfif" alt="">
+                  <img src="images/perfume-11.jfif" alt="" width="200px">
                   <h1 class="card-title pricing-card-title">$15</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                <div class="card-header py-3 text-bg-primary border-primary">
-                  <h4 class="my-0 fw-normal">Enterprise</h4>
+            <div class="col product">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Enchanté</h4>
                 </div>
                 <div class="card-body">
-                  
-                  <img src="images/perfume-12.jfif" alt="">
+                  <img src="images/perfume-12.jfif" alt="" width="160px">
                   <h1 class="card-title pricing-card-title">$29</h1>
-                  <button type="button" class="w-50 btn btn-lg btn-primary">Add to cart</button>
+                  <button type="button" class="w-50 btn btn-lg btn-dark">Add to cart</button>
                 </div>
               </div>
             </div>
           </div>
         </main>
+</div>
     </div>
         <script src="main.js"></script>
 </body>

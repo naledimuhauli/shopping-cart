@@ -1,0 +1,19 @@
+body {
+    background-image: url(images/background.jpg);
+    background-size: contain;
+   
+}
+
+header{
+    background-color: white;
+    padding: 0 20px;
+}
+
+.card{
+    background-color: rgb(245, 205, 218);
+    padding: 10px;
+}
+
+h1{
+    font-family: "Playwrite SK", cursive;
+}
