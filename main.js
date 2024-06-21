@@ -15,6 +15,8 @@ function displayCart(){
 
 function handleCart(){
     let numberInCart = document.querySelector('.number');
-    numberInCart;
-    console.log(typeof numberInCart);
+    let cartNumber = Number(numberInCart.innerHTML);
+
+    cartNumber += 1;
+    numberInCart.innerHTML = cartNumber;
 }

@@ -16,6 +16,14 @@ header{
     position: relative;
 }
 
+.image{
+    background-color: transparent;
+}
+
+.card-body{
+    background-color: transparent;
+}
+
 .number{
    font-size: 15px;
    color: rgb(252, 248, 248);
@@ -34,7 +42,7 @@ header{
 }
 
 .card{
-    background-color: rgb(253, 221, 230);
+    background-color: rgb(255, 216, 227);
     padding: 10px;
 }
 
