@@ -2,8 +2,6 @@
 //when user clicks 'add to cart' again, increase number by 1
 //when user clicks the cart , display the cart section
 
-
-
 function displayCart(){
     let cart = document.querySelector('#cart');
      let body = document.querySelector('body');
@@ -11,6 +9,15 @@ function displayCart(){
     body.classList.toggle('showCart')
 }
     cart.addEventListener('click', displayCart());
+
+
+    let addButton = document.querySelectorAll('.add-btn');
+
+    addButton.forEach(button => {
+        button.addEventListener('click', () => {
+            handleCart();
+        });
+    });
 
 
 

@@ -1,22 +1,24 @@
 body {
     background-image: url(images/background.jpg);
-    background-size: contain;
+    background-size: cover;
    
 }
 .container{
     transition: transform .5s;
+    max-width: 900px;
+    max-height: 700px;
 }
 
-header{
-    background-color: white;
-    padding: 0 20px;
-}
+
 
 .icon{
     position: relative;
 }
 
 .image{
+    width: 150px;
+    height: 150px;
+    mix-blend-mode: darken;
     background-color: transparent;
 }
 
@@ -42,23 +44,21 @@ header{
 }
 
 .card{
-    background-color: rgb(255, 216, 227);
-    padding: 10px;
+    background-color: rgb(243, 185, 202);
+    
+}
+.add-btn{
+    background-image: url(images/card.jpg);
+    color: white;
+    font-weight: 600;
 }
 
-.paragraph{
-    color: black;
-    font-size: 40px;
-}
-
-#parfum{
-    font-family: "Playwrite SK", cursive;
-}
 
 .card-title{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 24px;
     color: black;
+    font-weight: bold;
     margin-top: 10px;
 }
 
@@ -89,7 +89,7 @@ body.showCart .shopping-cart{
 }
 
 body.showCart .container{
-    transform: translateX(-250px);
+    transform: translateX(-200px);
 }
 
 .shopping-cart h1{
