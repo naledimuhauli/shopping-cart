@@ -55,7 +55,7 @@ const initApp = () =>{
         newDiv.innerHTML = `
             <img src="${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
+            <div class="price">R${value.price.toLocaleString()}</div>
             <button onclick="addToCart(${key})">Add To Cart</button>
         `;
         list.appendChild(newDiv);
@@ -89,18 +89,18 @@ const reloadCart = () =>{
             newDiv.innerHTML = `
                 <div><img src="${value.image}"></div>
                 <div class="cardTitle">${value.name}</div>
-                <div class="cardPrice">${value.price.toLocaleString()}</div>
+                <div class="cardPrice">R${value.price.toLocaleString()}</div>
                 <div>
-                    <button style="background-color: #560bad" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button style="background-color: black" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button style="background-color: #560bad" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    <button style="background-color: black" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>
             `;
             listCard.appendChild(newDiv);
         }
     });
 
-    total.innerText = totalPrice.toLocaleString();
+    total.innerText = `R${totalPrice.toLocaleString()}`;
     quantity.innerText = count;
 
     // Close cart if empty and set quantity to 0
