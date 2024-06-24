@@ -87,8 +87,8 @@ function displayCart(){
         //   document.querySelector('.number')
         //   .innerHTML = cartQuantity;
 
-        //      console.log(cartItems);
-        //      console.log(cartQuantity);
+             console.log(cartItems);
+            //  console.log(cartQuantity);
 
      handleCart();
      handleShoppingCart();
