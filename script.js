@@ -1,20 +1,19 @@
-const openShopping = document.querySelector('.cart-icon');
-const closeShopping = document.querySelector('.closeShopping');
-const list = document.querySelector('.list');
-const listCard = document.querySelector('.listCard');
-const total = document.querySelector('.total');
-const body = document.querySelector('body');
-const quantity = document.querySelector('.number');
+//select html elemnts using DOM
 
-openShopping.addEventListener('click', () =>{
+let openCart = document.querySelector('.cart-icon');
+let closeCart = document.querySelector('.closeCart');
+let body = document.querySelector('body');
+//open cart 
+openCart.addEventListener('click', () =>{
     body.classList.add('active');
 });
-
-closeShopping.addEventListener('click', () =>{
+//close cart 
+closeCart.addEventListener('click', () =>{
     body.classList.remove('active');
 });
 
-let products = [{
+ //save data in Js
+let productList = [{
     id: '1',
     name: 'Scented Bliss',
     image: 'images/perfume-9.webp',
@@ -46,61 +45,73 @@ let products = [{
     price: 2100
 }];
 
-let listCards = [];
+//selecting more html elemnts using the dom
+let list = document.querySelector('.list');
+let cartList = document.querySelector('.cartList');
+let totalNum = document.querySelector('.total');
+let quantity = document.querySelector('.number');
 
-const initApp = () =>{
-    products.forEach((value, key) => {
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('item');
-        newDiv.innerHTML = `
+//make it an empty string so you can add the items later
+let listProduct = [];
+
+//generate HTML
+function itemList () {
+    productList.forEach((value, index) => {
+        let newItem = document.createElement('div');
+        newItem.classList.add('object');
+        newItem.innerHTML = `
             <img src="${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">R${value.price.toLocaleString()}</div>
-            <button onclick="addToCart(${key})">Add To Cart</button>
+            <button onclick="addingToCart(${index})">Add To Cart</button>
         `;
-        list.appendChild(newDiv);
+        list.appendChild(newItem);
     });
 }
 
-initApp();
+itemList();
 
-const addToCart = (key) =>{
-    if (listCards[key] == null) {
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
+//increase cart quantity
+function addingToCart (index) {
+    if (listProduct[index] == null) {
+        listProduct[index] = JSON.parse(JSON.stringify(productList[index]));//saving into a js object
+        listProduct[index].quantity = 1;
     } else {
-        listCards[key].quantity += 1;
-        listCards[key].price = listCards[key].quantity * products[key].price;
+        listProduct[index].quantity += 1;
+        listProduct[index].price = listProduct[index].quantity * productList[index].price;
     }
-    reloadCart();
+    reload();
 };
 
-const reloadCart = () =>{
-    listCard.innerHTML = '';
+//add item into cart
+
+function reload () {
     let count = 0;
     let totalPrice = 0;
 
-    listCards.forEach((value, key) => {
+    cartList.innerHTML = '';
+
+    listProduct.forEach((value, index) => {
         if (value != null) {
             totalPrice += value.price;
             count += value.quantity;
 
-            let newDiv = document.createElement('li');
-            newDiv.innerHTML = `
+            let newItem = document.createElement('li');
+            newItem.innerHTML = `
                 <div><img src="${value.image}"></div>
-                <div class="cardTitle">${value.name}</div>
-                <div class="cardPrice">R${value.price.toLocaleString()}</div>
+                <div class="cartTitle">${value.name}</div>
+                <div class="cartPrice">R${value.price.toLocaleString()}</div>
                 <div>
-                    <button style="background-color: black" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button class="cartButton" onClick="changeQuantity(${index}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button style="background-color: black" class="cardButton" onClick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    <button class="cartButton" onClick="changeQuantity(${index}, ${value.quantity + 1})">+</button>
                 </div>
             `;
-            listCard.appendChild(newDiv);
+            cartList.appendChild(newItem);
         }
     });
 
-    total.innerText = `R${totalPrice.toLocaleString()}`;
+    totalNum.innerText = `R${totalPrice.toLocaleString()}`;
     quantity.innerText = count;
 
     // Close cart if empty and set quantity to 0
@@ -110,14 +121,14 @@ const reloadCart = () =>{
     }
 };
 
-const changeQuantity = (key, newQuantity) => {
+function changeQuantity (index, newQuantity) {
     if (newQuantity <= 0) {
-        delete listCards[key];
+        delete listProduct[index];
     } else {
-        listCards[key].quantity = newQuantity;
-        listCards[key].price = newQuantity * products[key].price;
+        listProduct[index].quantity = newQuantity;
+        listProduct[index].price = newQuantity * productList[index].price;
     }
-    reloadCart();
+    reload();
 };
 
 
