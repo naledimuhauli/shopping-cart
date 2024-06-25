@@ -1,8 +1,8 @@
 //select html elemnts using DOM
-
+let body = document.querySelector('body');
 let openCart = document.querySelector('.cart-icon');
 let closeCart = document.querySelector('.closeCart');
-let body = document.querySelector('body');
+
 //open cart 
 openCart.addEventListener('click', () =>{
     body.classList.add('active');
@@ -46,10 +46,10 @@ let productList = [{
 }];
 
 //selecting more html elemnts using the dom
-let list = document.querySelector('.list');
-let cartList = document.querySelector('.cartList');
-let totalNum = document.querySelector('.total');
 let quantity = document.querySelector('.number');
+let list = document.querySelector('.list');
+let totalNum = document.querySelector('.total');
+let cartList = document.querySelector('.cartList');
 
 //make it an empty string so you can add the items later
 let listProduct = [];
@@ -128,6 +128,7 @@ function changeQuantity (index, newQuantity) {
         listProduct[index].quantity = newQuantity;
         listProduct[index].price = newQuantity * productList[index].price;
     }
+    //reload the cart again
     reload();
 };
 
